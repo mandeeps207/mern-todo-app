@@ -7,7 +7,7 @@ const TodoList = () => {
     const [todos, setTodos] = useState([]);
 
     useEffect(() => {
-        axios.get('http://localhost:5000/todos')
+        axios.get('https://mern-todo-app-qaxh.onrender.com/todos')
             .then(res => setTodos(res.data))
             .catch(err => console.error(err));
     }, []);
