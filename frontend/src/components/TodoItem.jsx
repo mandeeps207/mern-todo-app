@@ -3,7 +3,7 @@ import axios from 'axios';
 
 const TodoItem = ({ todo, updateTodo, deleteTodo }) => {
     const toggleComplete = () => {
-        axios.patch(`http://localhost:5000/todos/${todo._id}`, {
+        axios.patch(`https://mern-todo-app-qaxh.onrender.com/todos/${todo._id}`, {
             completed: !todo.completed
         })
             .then(res => updateTodo(res.data))
@@ -11,7 +11,7 @@ const TodoItem = ({ todo, updateTodo, deleteTodo }) => {
     };
 
     const handleDelete = () => {
-        axios.delete(`http://localhost:5000/todos/${todo._id}`)
+        axios.delete(`https://mern-todo-app-qaxh.onrender.com/todos/${todo._id}`)
             .then(() => deleteTodo(todo._id))
             .catch(err => console.error(err));
     };

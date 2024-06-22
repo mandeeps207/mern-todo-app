@@ -6,7 +6,7 @@ const TodoForm = ({ addTodo }) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        axios.post('http://localhost:5000/todos', { title, completed: false })
+        axios.post('https://mern-todo-app-qaxh.onrender.com/todos', { title, completed: false })
             .then(res => {
                 addTodo(res.data);
                 setTitle('');
